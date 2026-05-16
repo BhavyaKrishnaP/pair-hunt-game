@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+.nav-title {
+  color: rgb(27, 6, 101);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.home-title {
+  font-family: "Lobster", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.game-container {
+  padding: 15px;
+  min-height: auto;
+}
+
+.glass {
+  background: rgba(226, 226, 228, 0.29);
+  border: 2px solid rgba(6, 76, 226, 0.478);
+  box-shadow: 0 3px 2px rgba(21, 63, 229, 0.704);
+}
+
+.gradient-btn {
+  background: linear-gradient(to right, #3b67a5e7, #097ce8);
+  border: none;
+  color: white;
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+}
+
+.main-bg {
+  min-height: 100vh;
+}
+
+.memory-card img {
+  width: 90%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 15px;
+  border: 2px dashed rgb(228, 42, 9);
+  background: rgba(9, 125, 233, 0.156);
+}
+
+.memory-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.memory-card .front {
+  transform: rotateY(90deg);
+  position: absolute;
+  transition: all ease-in 0.2s;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.memory-card .back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.settings-card {
+  background: linear-gradient(145deg, rgba(11, 136, 209, 0.471), rgba(16, 92, 216, 0.214));
+  border: 2px solid rgba(31, 107, 137, 0.501);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(40, 175, 196, 0.536);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.setting-btn {
+  background: rgba(48, 95, 166, 0.201);
+  padding: 8px 10px;
+}
+
+.sound-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+}
+
+.sound-on {
+  background: rgba(6, 176, 6, 0.489);
+}
+
+.sound-off {
+  background: rgba(229, 20, 20, 0.632);
+}
+
+.new-game-btn {
+  background: linear-gradient(145deg, rgba(23, 137, 134, 0.471), rgba(24, 78, 163, 0.307));
+  box-shadow: 0 8px 12px rgba(40, 175, 196, 0.536);
+}
+
+.score-wrapper {
+  display: flex;
+  gap: 6px;
+}
+
+.score-box {
+  min-width: 110px;
+  padding: 10px 15px;
+  border: 1px solid rgb(44, 106, 173);
+  border-radius: 20px;
+  background: rgba(21, 154, 203, 0.121);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.score-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+}
+
+.score-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #054da7;
+}
+
+.modal-bg {
+  background: linear-gradient(135deg, #111111c6, #000b0b);
+  border-radius: 30px;
+}
+
+.intro-bg {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background-image: url('https://img.freepik.com/free-vector/flat-floral-spring-background_23-2150111286.jpg?semt=ais_hybrid&w=740&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.intro-card {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(88, 88, 88, 0.026);
+  border: 2px dashed rgba(33, 55, 109, 0.4);
+  backdrop-filter: blur(2px);
+  border-radius: 30px;
+  box-shadow: 8px 4px 20px 15px rgba(2, 148, 141, 0.881);
+}
+
+.intro-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.play-btn,
+.help-btn {
+  background: linear-gradient(135deg, #0484e6fa, #2798eec6);
+  border: none;
+  width: 100%;
+  box-shadow: 2px 5px 8px rgba(5, 110, 238, 0.932);
+}
+
+.gotit-btn{
+  background: linear-gradient(135deg, #c4d8e7fa, #dee4e99d);
+  width: 100%;
+  box-shadow: 2px 5px 8px rgba(168, 201, 241, 0.932);
+}
+
+.home-btn{
+  border: none;
+  background: linear-gradient(135deg, #03528ffa, #2798eec6);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 2px 5px 8px rgb(41, 133, 245);
+}
+
+.win-btn{
+  border: none;
+  background: linear-gradient(135deg, #026524fa, #0ac451b4);
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 2px 5px 8px rgb(5, 133, 39);
+  padding: 6px 16px;
+}
+
+.lose-btn{
+  border: none;
+  background: linear-gradient(135deg, #cf1111fa, #920808b4);
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 2px 5px 8px rgb(165, 19, 2);
+  padding: 6px 16px;
+}
+
+.help-modal {
+  background: linear-gradient(135deg, #0f0f0fe5, #000b0bf9);
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.help-steps li {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(11, 124, 222, 0.866);
+  list-style-type: square;
+  line-height: 30px;
+}
+
+.custom-help-modal{
+  background: transparent !important;
+  border: none !important;
+}
+
+
+@media(max-width:992px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media(max-width:768px) {
+  .home-title {
+    font-size: 2.3rem;
+  }
+
+  .score-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .memory-card img {
+    height: 95px;
+    width: 100%;
+  }
+
+  .intro-bg{
+    padding: 15px;
+    background-position: center center;
+  }
+}
+
+@media (max-width: 480px) {
+  .memory-card img {
+    height: 78px;
+    width: 100%;
+  }
+
+  .score-box {
+    min-width: 90px;
+    padding: 8px;
+  }
+
+  .score-value {
+    font-size: 20px;
+  }
+
+  .game-container {
+    padding: 8px;
+  }
+}
