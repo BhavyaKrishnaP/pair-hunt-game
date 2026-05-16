@@ -38,7 +38,7 @@ function Home() {
     maxMoves = 20
   }
   if (boardSize == 6) {
-    maxMoves = 30
+    maxMoves = 40
   }
 
   let totalMatches = 2
@@ -63,8 +63,10 @@ function Home() {
     setMatches(0)
     if (boardSize == 6) {
       setTime(300)
-    } else {
+    } else if(boardSize == 4){
       setTime(180)
+    }else{
+      setTime(60)
     }
     setGameStarted(false)
     setDisabled(false)
